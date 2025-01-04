@@ -1,0 +1,26 @@
+Experiment 5: Arrays in Assembly
+Code Files
+
+arm
+; Find the maximum value in an array
+MOV r0, #5        ; load 5 into r0 (array size)
+MOV r1, #0        ; load 0 into r1 (max value)
+LDR r2, =array     ; load address of array into r2
+loop
+LDR r3, [r2]      ; load value from array into r3
+CMP r3, r1        ; compare r3 to r1
+BLE next           ; if r3 <= r1, branch to next
+MOV r1, r3        ; else, move r3 into r1
+next
+ADD r2, r2, #4    ; add 4 to r2 (move to next element)
+SUB r0, r0, #1    ; subtract 1 from r0
+CMP r0, #0        ; compare r0 to 0
+BNE loop           ; if r0 != 0, branch to loop
+MOV r0, r1        ; move r1 into r0 (output)
+
+array DCD 1, 2, 3, 4, 5
+
+
+Report
+In this experiment, we learned how to work with arrays in ARM assembly
+
