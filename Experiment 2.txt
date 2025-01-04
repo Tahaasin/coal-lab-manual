@@ -1,0 +1,21 @@
+Experiment 2: Basic Assembly Instructions
+Code Files
+
+arm
+; Load and store data using LDR and STR
+MOV r0, #10      ; load 10 into r0
+LDR r1, =data     ; load address of data into r1
+STR r0, [r1]      ; store r0 into memory location pointed to by r1
+
+; Basic arithmetic operations using ADD and SUB
+MOV r0, #5        ; load 5 into r0
+MOV r1, #3        ; load 3 into r1
+ADD r2, r0, r1    ; add r0 and r1, store result in r2
+SUB r3, r0, r1    ; subtract r1 from r0, store result in r3
+
+data DCD 0          ; define data location
+
+
+Report
+In this experiment, we learned how to use basic assembly instructions to load and store data, as well as perform arithmetic operations.
+
