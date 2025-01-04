@@ -1,0 +1,21 @@
+
+
+Experiment 3: Conditional Execution
+Code Files
+
+arm
+; Compare two numbers and output the larger number
+MOV r0, #5        ; load 5 into r0
+MOV r1, #3        ; load 3 into r1
+CMP r0, r1        ; compare r0 and r1
+BLE larger         ; if r0 <= r1, branch to larger
+MOV r2, r0        ; else, move r0 into r2
+B end               ; branch to end
+larger
+MOV r2, r1        ; move r1 into r2
+end
+MOV r0, r2        ; move r2 into r0 (output)
+
+
+Report
+In this experiment, we learned how to use conditional execution in ARM assembly.
